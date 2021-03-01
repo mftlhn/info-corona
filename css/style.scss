@@ -1,0 +1,56 @@
+body,
+html {
+    margin: 0;
+    background-image: url(../image/background.png);
+    background-repeat: no-repeat;
+    background-size: 100vmax;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.nav-item {
+    // text-transform: uppercase;
+    margin-left: 1em;
+    // display: block;
+
+    .nav-link {
+        text-transform: uppercase;
+        display: block;
+        position: relative;
+
+        &:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background: #696969;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+        }
+
+        &:hover:after {
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    .active {
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #696969;
+        // transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+}
+
+header {
+    margin-top: 150px;
+}

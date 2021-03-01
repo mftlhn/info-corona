@@ -1,0 +1,54 @@
+body,
+html {
+  margin: 0;
+  background-image: url(../image/background.png);
+  background-repeat: no-repeat;
+  background-size: 100vmax;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-item {
+  margin-left: 1em;
+}
+
+.nav-item .nav-link {
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+}
+
+.nav-item .nav-link:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #696969;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.nav-item .nav-link:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-item .active {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #696969;
+  width: 0;
+}
+
+header {
+  margin-top: 150px;
+}
+/*# sourceMappingURL=style.css.map */
