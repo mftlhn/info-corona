@@ -5,6 +5,7 @@ html {
   background-repeat: no-repeat;
   background-size: 100vmax;
   font-family: 'Montserrat', sans-serif;
+  background-position-y: 15%;
 }
 
 .nav-item {
