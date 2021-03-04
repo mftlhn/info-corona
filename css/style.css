@@ -3,9 +3,11 @@ html {
   margin: 0;
   background-image: url(../image/background.png);
   background-repeat: no-repeat;
-  background-size: 100vmax;
+  background-size: cover;
+  height: 100vh;
   font-family: 'Montserrat', sans-serif;
-  background-position-y: 15%;
+  background-position-y: 40%;
+  background-position-x: center;
 }
 
 .nav-item {
@@ -19,7 +21,6 @@ html {
 }
 
 .nav-item .nav-link:after {
-  background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
   display: block;
@@ -38,7 +39,6 @@ html {
 }
 
 .nav-item .active {
-  background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
   display: block;
