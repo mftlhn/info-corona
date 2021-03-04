@@ -1,12 +1,13 @@
 body,
 html {
-    margin: 0;
+    // margin: 0;
+    // padding: 0;
     background-image: url(../image/background-2.png);
     background-repeat: no-repeat;
     background-size: 100vmax;
     font-family: 'Montserrat', sans-serif;
-    background-position-x: center;
-    background-position-y: top;
+    // background-position-x: center;
+    // background-position-y: top;
     background-color: #CAF1E9;
 }
 
@@ -62,13 +63,13 @@ h3 {
 }
 
 .btn-selengkapnya {
-    background-color: #B5E6E5;
+    background-color: #CAE5F0;
     color: #222;
     border-radius: 50px;
     padding: 10px 20px;
 
     &:hover {
-        background-color: #86d4d3;
+        background-color: #afd7e7;
         color: #222;
     }
 }
