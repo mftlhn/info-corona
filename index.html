@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
 
     <title>Indonesia sehat</title>
   </head>
@@ -29,7 +30,7 @@
                     <a class="nav-link" href="#home">Beranda</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">Cerita</a>
+                    <a class="nav-link" href="#gejala">Gejala</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
@@ -39,7 +40,7 @@
         </div>
     </nav>
 
-    <header>
+    <header data-aos="fade-right">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12">
@@ -50,7 +51,7 @@ Sebagian besar orang yang tertular COVID-19 akan mengalami gejala ringan hingga 
             </div>
             <div class="row mt-3">
                 <div class="col-lg-3">
-                    <a href="#stat" class="btn btn-selengkapnya">Lihat selengkapnya</a>
+                    <a href="#stat" class="btn btn-selengkapnya" id="selengkapnya">Lihat selengkapnya</a>
                 </div>
             </div>
         </div>
@@ -58,30 +59,62 @@ Sebagian besar orang yang tertular COVID-19 akan mengalami gejala ringan hingga 
 
     <main>
         <div class="container">
-            <section class="row section-stat justify-content-center" id="stat">
-                <div class="col-3 col-md-2 stat-detail">
-                    <h2>1JT</h2>
-                    <p>Terjangkit</p>
+            <section class="row section-stat justify-content-center" id="stat" data-aos-duration="500" data-aos="fade-down">
+                <div class="col-4 col-md-2 stat-detail">
+                    <div id="odp"></div>
+                    <p class="detail-text">Orang dalam pengawasan</p>
                 </div>
-                <div class="col-3 col-md-2 stat-detail">
-                    <h2>1JT</h2>
-                    <p>Terjangkit</p>
+                <div class="col-4 col-md-2 stat-detail">
+                    <div id="spesimen"></div>
+                    <p class="detail-text">Total spesimen</p>
                 </div>
-                <div class="col-3 col-md-2 stat-detail">
+                <div class="col-4 col-md-2 stat-detail">
                     <h2>1JT</h2>
-                    <p>Terjangkit</p>
-                </div>
-                <div class="col-3 col-md-2 stat-detail">
-                    <h2>1JT</h2>
-                    <p>Terjangkit</p>
+                    <p class="detail-text">Terjangkit</p>
                 </div>
             </section>
+            <section class="detail-gejala " id="gejala" >
+                <div class="row " data-aos="fade-up">
+                    <div class="col-12 text-center">
+                        <h2>Gejala</h2>
+                    </div>
+                </div>
+                <div class="row mt-4 " data-aos="zoom-in" data-aos-duration="900">
+                    <div class="col-lg-4 col-md-6 col-sm-12 pl0">
+                        <h5 >Gejala yang sedikit tidak umum</h5>
+                        <ul>
+                            <li>Rasa tidak nyaman dan nyeri</li>
+                            <li>Nyeri tenggorokan</li>
+                            <li>Diare</li>
+                            <li>Konjungtivitis (mata merah)</li>
+                            <li>Sakit kepala</li>
+                            <li>Hilangnya indera perasa atau penciuman</li>
+                            <li>Ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 ">
+                        <h5 >Gejala umum</h5>
+                        <ul>
+                            <li>Demam</li>
+                            <li>Batuk kering</li>
+                            <li>Kelelahan</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <h5 >Gejala serius</h5>
+                        <ul>
+                            <li>kesulitan bernapas atau sesak napas</li>
+                            <li>nyeri dada atau rasa tertekan pada dada</li>
+                            <li>hilangnya kemampuan berbicara atau bergerak</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section-lanjut">
+                <!-- <div class="parallax"></div> -->
+                
+            </section>
         </div>
-        <section class="detail mt-5 row justify-content-center">
-            <div class="col-12">
-                <div class="jumbotron"></div>
-            </div>
-        </section>
     </main>
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -90,6 +123,9 @@ Sebagian besar orang yang tertular COVID-19 akan mengalami gejala ringan hingga 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- AOS -->
+    <script src="aos-master/dist/aos.js"></script>
 
     <script src="js/script.js"></script>
 

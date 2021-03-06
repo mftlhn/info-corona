@@ -1,10 +1,13 @@
 body,
 html {
+  margin: -10;
+  padding: -10;
   background-image: url(../image/background-2.png);
   background-repeat: no-repeat;
   background-size: 100vmax;
   font-family: 'Montserrat', sans-serif;
   background-color: #CAF1E9;
+  scroll-behavior: smooth;
 }
 
 .nav-item {
@@ -26,14 +29,18 @@ html {
   left: 50%;
   position: absolute;
   background: #696969;
-  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  -webkit-transition: width .3s ease 0s, left .3s ease 0s;
+  transition: width .3s ease 0s, left .3s ease 0s;
   width: 0;
 }
 
 .nav-item .nav-link:hover:after {
   width: 100%;
   left: 0;
+}
+
+.bg-grey {
+  background-color: #CAE5F0;
 }
 
 .active {
@@ -86,5 +93,22 @@ h3 {
 
 .section-stat p {
   text-align: center;
+}
+
+.detail-gejala {
+  margin-top: 100px;
+}
+
+.parallax {
+  background-image: url("../image/parallax.jpg");
+  min-height: 200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-lanjut {
+  margin-top: 200px;
 }
 /*# sourceMappingURL=style.css.map */
