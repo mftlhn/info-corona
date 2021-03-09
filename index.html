@@ -1,21 +1,22 @@
 <!doctype html>
 <html lang="en">
-  <head id="home">
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="aos-master/dist/aos.css">
+    <link rel="stylesheet" href="assets/aos-master/dist/aos.css">
+    <link rel="stylesheet" href="assets/fontawesome-free/css/all.css">
 
     <title>Indonesia sehat</title>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-transparent">
+  <body id="home" data-spy="scroll" data-target="#navbar-corona" data-offset="0">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-transparent" id="navbar-corona">
         <div class="container">
             <a class="navbar-brand" href="#home">
                 <!-- <img src="image/logo-2.png" alt="" width="300" height="100"> -->
@@ -26,27 +27,33 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">Beranda</a>
+                <li class="nav-item " id="nav-link-home">
+                    <a class="nav-link " href="#home">Beranda</a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link" href="#gejala">Gejala</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#pencegahan">Pencegahan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#perawatan">Perawatan</a>
                 </li>
             </ul>
             </div>
         </div>
     </nav>
 
-    <header data-aos="fade-right">
+    <header data-aos="fade-right" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <h2 class="judul">COVID-19</h2>
-                    Penyakit virus corona (COVID-19) adalah penyakit menular yang disebabkan oleh virus corona yang baru-baru ini ditemukan. <br>
-Sebagian besar orang yang tertular COVID-19 akan mengalami gejala ringan hingga sedang, dan akan pulih tanpa penanganan khusus.
+                    <p align="justify">
+                        Penyakit virus corona (COVID-19) adalah penyakit menular yang disebabkan oleh virus corona yang baru-baru ini ditemukan. <br>
+                        Sebagian besar orang yang tertular COVID-19 akan mengalami gejala ringan hingga sedang, dan akan pulih tanpa penanganan khusus. <br>
+                        Vaksin untuk penyakit virus corona kini sudah tersedia di Indonesia dan sedang dalam tahap awal vaksinasi.
+                    </p>
                 </div>
             </div>
             <div class="row mt-3">
@@ -57,65 +64,182 @@ Sebagian besar orang yang tertular COVID-19 akan mengalami gejala ringan hingga 
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <section class="row section-stat justify-content-center" id="stat" data-aos-duration="500" data-aos="fade-down">
-                <div class="col-4 col-md-2 stat-detail">
-                    <div id="odp"></div>
-                    <p class="detail-text">Orang dalam pengawasan</p>
-                </div>
-                <div class="col-4 col-md-2 stat-detail">
-                    <div id="spesimen"></div>
-                    <p class="detail-text">Total spesimen</p>
-                </div>
-                <div class="col-4 col-md-2 stat-detail">
-                    <h2>1JT</h2>
-                    <p class="detail-text">Terjangkit</p>
-                </div>
-            </section>
-            <section class="detail-gejala " id="gejala" >
-                <div class="row " data-aos="fade-up">
-                    <div class="col-12 text-center">
-                        <h2>Gejala</h2>
+    <div >
+        <main>
+            <div class="container">
+                <section class="row section-stat justify-content-center" id="stat" data-aos-duration="500" data-aos="fade-down">
+                    <div class="col-4  col-md-2 stat-detail">
+                        <div id="positif"></div>
+                        <p class="detail-text">Kasus Positif</p>
+                    </div>
+                    <div class="col-4  col-md-2 stat-detail">
+                        <div id="sembuh"></div>
+                        <p class="detail-text">Kasus Sembuh</p>
+                    </div>
+                    <div class="col-4  col-md-2 stat-detail">
+                        <div id="meninggal"></div>
+                        <p class="detail-text">Kasus Meninggal</p>
+                    </div>
+                </section>
+                <section class="detail-gejala " id="gejala" data-aos="fade-down">
+                    <div class="kartu">
+                        <div class="row mt-5" data-aos="fade-up">
+                            <div class="col-12 text-center">
+                                <h2 style="font-weight: 700;">Gejala</h2>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mt-5 " data-aos="zoom-in" data-aos-duration="900">
+                                <div class="col-lg-4 col-md-6 col-sm-12 pl0">
+                                    <h5 >Gejala yang sedikit tidak umum</h5>
+                                    <ul>
+                                        <li>Rasa tidak nyaman dan nyeri</li>
+                                        <li>Nyeri tenggorokan</li>
+                                        <li>Diare</li>
+                                        <li>Konjungtivitis (mata merah)</li>
+                                        <li>Sakit kepala</li>
+                                        <li>Hilangnya indera perasa atau penciuman</li>
+                                        <li>Ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-12 ml-5">
+                                    <h5 >Gejala umum</h5>
+                                    <ul>
+                                        <li>Demam</li>
+                                        <li>Batuk kering</li>
+                                        <li>Kelelahan</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-12">
+                                    <h5 >Gejala serius</h5>
+                                    <ul>
+                                        <li>kesulitan bernapas atau sesak napas</li>
+                                        <li>nyeri dada atau rasa tertekan pada dada</li>
+                                        <li>hilangnya kemampuan berbicara atau bergerak</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-pencegahan mb-5" id="pencegahan" data-aos="fade-down">
+                    <div class="kartu">
+                        <div class="row mt-5" data-aos="fade-up">
+                            <div class="col-12 text-center">
+                                <h2 style="font-weight: 700;">Pencegahan</h2>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mt-5 " data-aos="zoom-in" data-aos-duration="900">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <h5 >Utuk mencegah penyebaran COVID-19</h5>
+                                    <ul class="text-justify">
+                                        <li>Cuci tangan Anda secara rutin. Gunakan sabun dan air, atau cairan pembersih tangan berbahan alkohol.</li>
+                                        <li>Selalu jaga jarak aman dengan orang yang batuk atau bersin.</li>
+                                        <li>Kenakan masker jika pembatasan fisik tidak dimungkinkan.</li>
+                                        <li>Jangan sentuh mata, hidung, atau mulut Anda.</li>
+                                        <li>Saat batuk atau bersin, tutup mulut dan hidung Anda dengan lengan atau tisu.</li>
+                                        <li>Jangan keluar rumah jika merasa tidak enak badan.</li>
+                                        <li>Jika demam, batuk, atau kesulitan bernapas, segera cari bantuan medis.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <img src="assets/image/family.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-perawatan mb-5" id="perawatan" data-aos="fade-down">
+                    <div class="kartu">
+                        <div class="row mt-5" data-aos="fade-up">
+                            <div class="col-12 text-center">
+                                <h2 style="font-weight: 700;">Perawatan</h2>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row mt-5 " data-aos="zoom-in" data-aos-duration="900">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <h5 >Setelah terpapar ke orang yang terinfeksi COVID-19, lakukan tindakan berikut:</h5>
+                                    <ul class="text-justify">
+                                        <li>Hubungi penyedia layanan kesehatan atau hotline COVID-19 untuk mendapatkan informasi terkait tempat dan waktu untuk menjalani tes.</li>
+                                        <li>Taati prosedur pelacakan kontak untuk menghentikan penyebaran virus.</li>
+                                        <li>Jika tes tidak tersedia, tetaplah di rumah dan jangan lakukan kontak dengan orang lain selama 14 hari.</li>
+                                        <li>Selama masa karantina, jangan pergi ke kantor, sekolah, atau tempat-tempat umum. Mintalah seseorang mencukupi kebutuhan Anda.</li>
+                                        <li>Jaga jarak minimal 1 meter dari orang lain, termasuk anggota keluarga Anda.</li>
+                                        <li>Kenakan masker medis untuk melindungi orang lain, termasuk jika/ketika Anda perlu meminta perawatan medis.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <h5 >Setelah terpapar ke orang yang terinfeksi COVID-19, lakukan tindakan berikut:</h5>
+                                    <ul class="text-justify">
+                                        <li>Hubungi penyedia layanan kesehatan atau hotline COVID-19 untuk mendapatkan informasi terkait tempat dan waktu untuk menjalani tes.</li>
+                                        <li>Taati prosedur pelacakan kontak untuk menghentikan penyebaran virus.</li>
+                                        <li>Jika tes tidak tersedia, tetaplah di rumah dan jangan lakukan kontak dengan orang lain selama 14 hari.</li>
+                                        <li>Selama masa karantina, jangan pergi ke kantor, sekolah, atau tempat-tempat umum. Mintalah seseorang mencukupi kebutuhan Anda.</li>
+                                        <li>Jaga jarak minimal 1 meter dari orang lain, termasuk anggota keluarga Anda.</li>
+                                        <li>Kenakan masker medis untuk melindungi orang lain, termasuk jika/ketika Anda perlu meminta perawatan medis.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer class="section-footer border-top">
+        <div class="container pt-5 pb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12 col-lg-4">
+                            <h5>ACCOUNT</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Refund</a></li>
+                                <li><a href="#">Security</a></li>
+                                <li><a href="#">Rewards</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-4">
+                            <h5>SOCIAL MEDIA</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="https://www.instagram.com/mftlhn" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                        Instagram
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/mifta-khussolikhin-64941b121/" target="_blank">
+                                        <i class="fab fa-linkedin"></i>
+                                        LinkedIn
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-sm-12 col-lg-4">
+                            <h5>STAY INTOUCH</h5>
+                            <ul class="list-unstyled">
+                                <li>Jakarta Utara</li>
+                                <li>Indonesia</li>
+                                <li>0838-7983-6341</li>
+                                <li>miftakhussolikhin@gmail.com</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="row mt-4 " data-aos="zoom-in" data-aos-duration="900">
-                    <div class="col-lg-4 col-md-6 col-sm-12 pl0">
-                        <h5 >Gejala yang sedikit tidak umum</h5>
-                        <ul>
-                            <li>Rasa tidak nyaman dan nyeri</li>
-                            <li>Nyeri tenggorokan</li>
-                            <li>Diare</li>
-                            <li>Konjungtivitis (mata merah)</li>
-                            <li>Sakit kepala</li>
-                            <li>Hilangnya indera perasa atau penciuman</li>
-                            <li>Ruam pada kulit, atau perubahan warna pada jari tangan atau jari kaki</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 ">
-                        <h5 >Gejala umum</h5>
-                        <ul>
-                            <li>Demam</li>
-                            <li>Batuk kering</li>
-                            <li>Kelelahan</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <h5 >Gejala serius</h5>
-                        <ul>
-                            <li>kesulitan bernapas atau sesak napas</li>
-                            <li>nyeri dada atau rasa tertekan pada dada</li>
-                            <li>hilangnya kemampuan berbicara atau bergerak</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section class="section-lanjut">
-                <!-- <div class="parallax"></div> -->
-                
-            </section>
+            </div>
         </div>
-    </main>
+        <div class="container-fluid">
+            <div class="row border-top justify-content-center align-items-center pt-4">
+                <div class="col-auto text-gray-500 font-weight-light">
+                    &copy;Miftakhussolikhin - 2021
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -125,9 +249,9 @@ Sebagian besar orang yang tertular COVID-19 akan mengalami gejala ringan hingga 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
     <!-- AOS -->
-    <script src="aos-master/dist/aos.js"></script>
+    <script src="assets/aos-master/dist/aos.js"></script>
 
-    <script src="js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
