@@ -89,4 +89,3 @@ function removeComa(angka) {
 
     return replace;
 }
-

@@ -11,14 +11,23 @@ html {
   position: relative;
 }
 
+.sticky-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
 .nav-item {
   margin-left: 1em;
 }
 
 .nav-item .nav-link {
-  text-transform: uppercase;
+  text-transform: capitalize;
   display: block;
   position: relative;
+  font-weight: 400;
+  font-size: 15px;
 }
 
 .nav-item .nav-link:after {
@@ -101,10 +110,6 @@ h3 {
   text-align: center;
 }
 
-.detail-gejala {
-  margin-top: 100px;
-}
-
 .parallax {
   background-image: url("../image/parallax.jpg");
   min-height: 200px;
@@ -114,8 +119,10 @@ h3 {
   background-size: cover;
 }
 
-.section-pencegahan {
-  margin-top: 50px;
+.section-pencegahan,
+.section-perawatan,
+.detail-gejala {
+  margin-top: 100px;
 }
 
 .section-footer {
@@ -134,5 +141,12 @@ h3 {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.perawatan-class,
+.gejala-class,
+.pencegahan-class {
+  font-weight: 400;
+  font-size: 15px;
 }
 /*# sourceMappingURL=style.css.map */
