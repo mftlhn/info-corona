@@ -51,6 +51,10 @@ html {
 
 .bg-grey {
   background-color: #CAE5F0;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  -webkit-transition: bottom .5s;
+  transition: bottom .5s;
 }
 
 .active {
@@ -95,6 +99,7 @@ h3 {
   backdrop-filter: blur(10.5px);
   -webkit-backdrop-filter: blur(10.5px);
   border-radius: 10px;
+  padding-left: 5px;
 }
 
 .section-stat .stat-detail {
